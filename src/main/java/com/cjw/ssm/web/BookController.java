@@ -1,5 +1,9 @@
 package com.cjw.ssm.web;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.List;
 
 import com.cjw.ssm.dto.AppointExecution;
@@ -35,7 +39,6 @@ public class BookController {
 
 	@RequestMapping("/view")
 	public ModelAndView view(HttpServletRequest request){
-		logger.debug("view 123");
 		String path = request.getParameter("path") + "";
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName(path);
