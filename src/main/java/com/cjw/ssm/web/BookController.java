@@ -42,7 +42,7 @@ public class BookController {
 		String path = request.getParameter("path") + "";
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName(path);
-		return mav;
+		return mav; // http://localhost:8080/book/view?path=index
 	}
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
